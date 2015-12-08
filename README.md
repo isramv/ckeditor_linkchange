@@ -22,11 +22,11 @@ replace it with:
 
 I created a simple ckeditor plugin that allows non technical writers to change the text of a URL only by selecting (partially) the link and editing the content in a prompt.
 
-this small plugin allows the end users to avoid typos and deleting the url by mistake.
+This small plugin allows the end users to avoid typos or deleting the url by mistake.
 
-but in order to make this plugin works in Drupal I need to create a plugin for the WYSIWYG Drupal module (the drupal way).
+In order to make this plugin work in Drupal I needed to create a plugin for the WYSIWYG Drupal module (the Drupal way).
 
-We need to let know the WYSIWYG module that we wanted to implement a new plugin for our ckeditor, so we use the following hook.
+We need to let the WYSIWYG module know we want to implement a new plugin for our ckeditor, so we use the following hook.
 
 ## the Drupal 7 Module:
 
@@ -40,7 +40,7 @@ folder structure:
 
 ### ckeditor_linkchange.info
 
-this file declare our module and it's dependencies:
+This file declares our module and its dependencies:
 
 	name = "Ckeditor linkchange plugin"
 	description = "Adds the ability to change the text or a url with the linkchange button (CKEditor)"
@@ -50,7 +50,7 @@ this file declare our module and it's dependencies:
 
 ### ckeditor_linkchange.module
 
-the `hook_wysiwyg_plugin().` let's the WYSIWYG module know that we have a new plugin available.
+The `hook_wysiwyg_plugin()` lets the WYSIWYG module know that we have a new plugin available.
 
 	<?php
 	
