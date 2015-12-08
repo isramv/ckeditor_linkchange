@@ -1,0 +1,5 @@
+name = "Ckeditor linkchange plugin"
+description = "Adds the ability to change the text or a url with the linkchange button (CKEditor)"
+package = Custom
+dependencies[] = wysiwyg
+core = 7.x

@@ -1,0 +1,25 @@
+<?php
+
+/**
+ * Implements hook_wysiwyg_plugin().
+ *
+ */
+function ckeditor_linkchange_wysiwyg_plugin($editor, $version) {
+    $plugins = array();
+    switch ($editor) {
+        case 'ckeditor':
+            if ($version > 4) {
+                $plugins['linkchange'] = array(
+                    'path' => drupal_get_path('module', 'ckeditor_linkchange') . '/plugins/linkchange',
+                    'filename' => 'plugin.js',
+                    'load' => TRUE,
+                    'buttons' => array(
+                        'linkchange' => t('Linkchange'),
+                    ),
+                );
+            }
+            break;
+    }
+    return $plugins;
+}
+
