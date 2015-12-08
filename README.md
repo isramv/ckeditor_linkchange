@@ -1,4 +1,4 @@
-# How to create a ckeditor plugin for WYSIWYG module in D7 ckeditor 4.
+# How to create a ckeditor 4 plugin for WYSIWYG module in Drupal 7
 
 ##My settings.
 
@@ -25,8 +25,6 @@ I created a simple ckeditor plugin that allows non technical writers to change t
 This small plugin allows the end users to avoid typos or deleting the url by mistake.
 
 In order to make this plugin work in Drupal I needed to create a plugin for the WYSIWYG Drupal module (the Drupal way).
-
-We need to let the WYSIWYG module know we want to implement a new plugin for our ckeditor, so we use the following hook.
 
 ## the Drupal 7 Module:
 
